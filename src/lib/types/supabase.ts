@@ -655,8 +655,6 @@ export interface paths {
           /** Optional name of user */
           name?: parameters["rowFilter.users.name"];
           languages?: parameters["rowFilter.users.languages"];
-          /** Foreign key relation to "onboardings" table, holding onboarding state for user */
-          onboarding_id?: parameters["rowFilter.users.onboarding_id"];
           /** Filtering Columns */
           select?: parameters["select"];
           /** Ordering */
@@ -713,8 +711,6 @@ export interface paths {
           /** Optional name of user */
           name?: parameters["rowFilter.users.name"];
           languages?: parameters["rowFilter.users.languages"];
-          /** Foreign key relation to "onboardings" table, holding onboarding state for user */
-          onboarding_id?: parameters["rowFilter.users.onboarding_id"];
         };
         header: {
           /** Preference */
@@ -735,8 +731,6 @@ export interface paths {
           /** Optional name of user */
           name?: parameters["rowFilter.users.name"];
           languages?: parameters["rowFilter.users.languages"];
-          /** Foreign key relation to "onboardings" table, holding onboarding state for user */
-          onboarding_id?: parameters["rowFilter.users.onboarding_id"];
         };
         body: {
           /** users */
@@ -1026,13 +1020,6 @@ export interface definitions {
     /** Optional name of user */
     name?: string;
     languages?: string;
-    /**
-     * Foreign key relation to "onboardings" table, holding onboarding state for user
-     *
-     * Note:
-     * This is a Foreign Key to `onboardings.id`.<fk table='onboardings' column='id'/>
-     */
-    onboarding_id?: number;
   };
 }
 
@@ -1120,8 +1107,6 @@ export interface parameters {
   /** Optional name of user */
   "rowFilter.users.name": string;
   "rowFilter.users.languages": string;
-  /** Foreign key relation to "onboardings" table, holding onboarding state for user */
-  "rowFilter.users.onboarding_id": string;
 }
 
 export interface operations {}
